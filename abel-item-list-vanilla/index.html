@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Item List</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--------------------------------------------------------------------->
+    <!-- ITEM LIST -->
+    <section class="card">
+      <h1 class="card__title">This is a technical proof</h1>
+      <p class="card__description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lacinia
+        habitasse arcu molestie maecenas cursus quam nunc, hendrerit posuere
+        augue fames dictumst placerat porttitor, dis mi pharetra vestibulum
+        venenatis phasellus.
+      </p>
+      <ul id="list" class="card__list"></ul>
+      <div class="card__footer">
+        <div class="footer__left">
+          <button
+            id="undo-btn"
+            class="btn btn--secondary btn--icon"
+            aria-label="Undo"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="transform: rotateY(180deg)"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M19.933 13.041a8 8 0 1 1 -9.925 -8.788c3.899 -1 7.935 1.007 9.425 4.747"
+              />
+              <path d="M20 4v5h-5" />
+            </svg>
+          </button>
+          <button
+            id="delete-btn"
+            class="btn btn--secondary"
+            aria-label="Delete"
+          >
+            DELETE
+          </button>
+        </div>
+        <button
+          id="open-modal-btn"
+          class="btn btn--primary"
+          aria-label="Open modal"
+        >
+          ADD
+        </button>
+      </div>
+    </section>
+
+    <!--------------------------------------------------------------------->
+    <!-- ADD MODAL -->
+    <div class="modal modal--hidden" id="modal">
+      <form class="modal__form" id="modal-form" autocomplete="off">
+        <div class="field">
+          <label for="item-input">Add item to list</label>
+          <input
+            type="text"
+            id="item-input"
+            placeholder="Type the text here..."
+            name="item-input"
+          />
+        </div>
+        <div class="modal__bottom">
+          <button
+            type="submit"
+            id="add-btn"
+            class="btn btn--primary"
+            aria-label="Add"
+          >
+            ADD
+          </button>
+          <button
+            type="button"
+            id="cancel-btn"
+            class="btn btn--secondary"
+            aria-label="Cancel"
+          >
+            CANCEL
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!--------------------------------------------------------------------->
+    <script src="main.js"></script>
+  </body>
+</html>
